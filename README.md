@@ -126,7 +126,7 @@
       body: content
     });
     const jsonResponse = await response.json();
-    const loginUrl = document.querySelector('#bundleID').value + '://globals.login?authToken=' + jsonResponse.response;
+    const loginUrl = document.querySelector('#bundleID').value + '://login?authToken=' + jsonResponse.response;
 
     // Afficher l'URL dans la page HTML
     document.querySelector('#loginUrl_appDisplay').textContent = 'URL construite : ' + loginUrl;
