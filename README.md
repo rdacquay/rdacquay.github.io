@@ -16,21 +16,21 @@
 </div>
 <div>
     <label>appId</label>
-    <input id="appId" name="appId" required type="text" value="com.teachonmars.tom.local"/>
+    <input id="appId" name="appId" required type="text" value="com.teachonmars.tom.svrfamily"/>
 </div>
 <div>
     <label>apiKey</label>
     <input id="apiKey" name="apiKey" required type="text"
-           value="pszFYCRoK1JJuUdGnC9PDO0cBhCnAlvsxHiANxSWmf9bu6LbpTrMb1ixARsEhx2m"/>
+           value=""/>
 </div>
 <div>
     <label>apiSecret</label>
     <input id="apiSecret" name="apiSecret" required
-           type="text" value="pPRfust5VIvrQLGa8urJCHlTyGtHGUkAdammVfMVvLNiB86QBvaDUB88baAdQtqt"/>
+           type="text" value=""/>
 </div>
 <div>
     <h2>Learner</h2>
-    <input id="learnerId" name="learnerId" required type="text" value="24bfdc1b-9016-467a-b9d8-2b043dc9054a"/>
+    <input id="learnerId" name="learnerId" required type="text" value="418ca441-67d0-426f-8750-e55b0ebb8aee"/>
 </div>
 <br>
 <br>
@@ -126,7 +126,7 @@
       body: content
     });
     const jsonResponse = await response.json();
-    const loginUrl = document.querySelector('#bundleID').value + '://login?authToken=' + jsonResponse.response;
+    const loginUrl = document.querySelector('#bundleID').value + '://callback?name=autoLogin&authToken=' + jsonResponse.response;
 
     // Afficher l'URL dans la page HTML
     document.querySelector('#loginUrl_appDisplay').textContent = 'URL construite : ' + loginUrl;
